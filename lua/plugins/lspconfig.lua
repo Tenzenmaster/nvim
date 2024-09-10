@@ -4,6 +4,7 @@ return {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
   },
+  cond = not vim.g.vscode,
   config = function()
     local servers = {
       'lua_ls',

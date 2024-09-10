@@ -1,6 +1,8 @@
 return {
   'nvim-lualine/lualine.nvim',
   dependencies = { 'nvim-tree/nvim-web-devicons' },
-  theme = 'dracula',
-  opts = {},
+  cond = not vim.g.vscode,
+  opts = {
+    theme = 'dracula',
+  },
 }
