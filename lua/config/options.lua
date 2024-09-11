@@ -20,6 +20,7 @@ vim.opt.scrolloff = 4
 vim.opt.guicursor = 'n-v-c-i:block-Cursor'
 vim.opt.showmode = false
 vim.opt.inccommand = 'split'
+vim.opt.incsearch = true
 vim.opt.signcolumn = 'yes'
 vim.opt.undofile = true
 
