@@ -14,6 +14,7 @@ return {
       'cssls',
       'ts_ls',
       'jdtls',
+      'rust_analyzer',
     }
 
     require('mason').setup({})
