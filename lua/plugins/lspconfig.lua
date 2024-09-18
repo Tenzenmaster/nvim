@@ -19,23 +19,26 @@ return {
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
 
     local servers = {
-      'lua_ls',
-      'clangd',
-      'pyright',
-      'html',
-      'cssls',
-      'ts_ls',
-      'jdtls',
-      'rust_analyzer',
+      lua_ls = {},
+      clangd = {},
+      pyright = {},
+      html = {},
+      cssls = {},
+      ts_ls = {},
+      jdtls = {},
+      rust_analyzer = {},
+      omnisharp = {
+        cmd = { 'dotnet', '$HOME/.local/share/nvim/mason/bin/omnisharp' },
+      },
     }
 
     require('mason').setup({})
     require('mason-lspconfig').setup({
-      ensure_installed = servers,
+      ensure_installed = vim.tbl_keys(servers),
     })
 
-    for _, server in pairs(servers) do
-      require('lspconfig')[server].setup({})
+    for server_name, server_config in pairs(servers) do
+      require('lspconfig')[server_name].setup(server_config)
     end
 
     -- Godot GDScript
