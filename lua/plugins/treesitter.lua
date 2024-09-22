@@ -32,6 +32,7 @@ return {
 				'make',
 				'groovy',
 				'kotlin',
+				'zig',
       },
       highlight = { enable = true },
       indent = { enable = true },
