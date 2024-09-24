@@ -28,7 +28,12 @@ return {
       jdtls = {},
       rust_analyzer = {},
       omnisharp = {
-        cmd = { 'dotnet', '$HOME/.local/share/nvim/mason/bin/omnisharp' },
+        cmd = {
+					vim.fn.stdpath('data') .. "/mason/bin/omnisharp",
+					'--languageserver',
+					'--hostPID',
+					tostring(vim.fn.getpid()),
+				},
       },
     }
 

@@ -33,6 +33,7 @@ return {
 				'groovy',
 				'kotlin',
 				'zig',
+				'tmux',
       },
       highlight = { enable = true },
       indent = { enable = true },
