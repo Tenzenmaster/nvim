@@ -1,21 +1,20 @@
-Colorscheme = 'gruvbox'
+Colorscheme = 'kanagawa'
 
 return {
 	{
 		'catppuccin/nvim',
-		name = 'catppuccin',
-		cond = (not vim.g.vscode) and (Colorscheme == 'catppuccin'),
+		name = 'catppuccin.nvim',
+		cond = not vim.g.vscode,
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme(Colorscheme)
-		end,
 	},
 	{
 		'ellisonleao/gruvbox.nvim',
 		priority = 1000,
-		cond = (not vim.g.vscode) and (Colorscheme == 'gruvbox'),
-		config = function()
-			vim.cmd.colorscheme(Colorscheme)
-		end,
+		cond = not vim.g.vscode,
+	},
+	{
+		'rebelot/kanagawa.nvim',
+		cond = not vim.g.vscode,
+		priority = 1000,
 	}
 }

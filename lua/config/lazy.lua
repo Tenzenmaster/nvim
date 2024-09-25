@@ -21,3 +21,5 @@ require("lazy").setup({
   install = { colorscheme = { Colorscheme } },
   checker = { enabled = false },
 })
+
+vim.cmd.colorscheme(Colorscheme)

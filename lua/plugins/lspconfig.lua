@@ -25,8 +25,8 @@ return {
       html = {},
       cssls = {},
       ts_ls = {},
-      jdtls = {},
       rust_analyzer = {},
+			jdtls = {},
       omnisharp = {
         cmd = {
 					vim.fn.stdpath('data') .. "/mason/bin/omnisharp",
@@ -35,6 +35,7 @@ return {
 					tostring(vim.fn.getpid()),
 				},
       },
+			zls = {},
     }
 
     require('mason').setup({})
