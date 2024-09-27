@@ -29,3 +29,20 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<esc>', '<cmd>noh<cr>')
 
+vim.api.nvim_create_autocmd('TextYankPost', {
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
+
+vim.api.nvim_create_autocmd('InsertEnter', {
+	callback = function()
+		vim.diagnostic.enable(false)
+	end,
+})
+
+vim.api.nvim_create_autocmd('BufWrite', {
+	callback = function()
+		vim.diagnostic.enable(true)
+	end,
+})
