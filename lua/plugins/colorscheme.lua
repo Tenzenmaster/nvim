@@ -1,4 +1,4 @@
-Colorscheme = 'kanagawa'
+Colorscheme = 'everforest'
 
 return {
 	{
@@ -16,5 +16,14 @@ return {
 		'rebelot/kanagawa.nvim',
 		cond = not vim.g.vscode,
 		priority = 1000,
-	}
+	},
+	{
+		'sainnhe/everforest',
+		cond = not vim.g.vscode,
+		priority = 1000,
+		config = function()
+			vim.g.everforest_enable_italic = true
+			vim.g.everforest_background = 'soft'
+		end,
+	},
 }
